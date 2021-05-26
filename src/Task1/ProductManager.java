@@ -55,9 +55,10 @@ public class ProductManager {
         for(Product product : productList) {
             if(product.getPrice()>=min && product.getPrice()<=max) {
                 System.out.println(product + "\n");
+            } else if (product.getPrice()<min || product.getPrice()>max) {
+                System.out.println("No result");
             }
         }
-
     }
 
     public int checkProductIndex(String name) {
@@ -114,5 +115,12 @@ public class ProductManager {
             sortByCC.add(product);
         }
         this.productList = sortByCC;
+    }
+
+    public int countItem() {
+        int count = 0;
+        for(Product product:productList)
+            count+=1;
+        return count;
     }
 }

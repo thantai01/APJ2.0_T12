@@ -75,6 +75,7 @@ public class Menu {
                 int min = sc.nextInt();
                 System.out.print("Enter max price: ");
                 int max = sc.nextInt();
+
                 productManager.findByPriceRange(min,max);
                 break;
             default:
@@ -124,12 +125,6 @@ public class Menu {
         }
     }
 
-//    static int countItem(ProductManager productManager) {
-//        int count = 0;
-//        for (int i = 0; i < productManager.; i++) {
-//
-//        }
-//    }
 }
 
 

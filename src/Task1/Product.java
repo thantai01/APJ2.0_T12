@@ -79,7 +79,7 @@ public class Product {
                 ", type: " + typeProduct(this.type) +
                 ", price: " + price + " $" +
                 " , " + specialize +
-                ", Time (" + localDateTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")) + ") " +
+                ", Assignment time: " + localDateTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")) + " !!" +
                 ']';
     }
 }

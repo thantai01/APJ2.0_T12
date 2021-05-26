@@ -14,6 +14,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int actionInput;
         do {
+            System.out.println("Have " + productManager.countItem() + " item left in a list!!! " );
             Menu.action();
             actionInput = sc.nextInt();
             switch (actionInput) {
@@ -57,13 +58,13 @@ public class Main {
 
         } while (actionInput > 0 && actionInput <7);
     }
+
     static void baseList(ProductManager productManager) {
         productManager.addProduct(new Product("Honda","CBR150R",1,2300,new Specialize(149,"Repsol")));
-        productManager.addProduct(new Product("Yamaha","R15V3",1,2500,new Specialize(149,"Black-Yellow")));
-        productManager.addProduct(new Product("Suzuki","GSX150R",1,2100,new Specialize(149,"Black")));
-        productManager.addProduct(new Product("Honda","CB150R",2,3000,new Specialize(149,"Red-Black")));
-        productManager.addProduct(new Product("Yamaha","MT15",2,2200,new Specialize(149,"Black")));
-        productManager.addProduct(new Product("Suzuki","GSX150S",2,2000,new Specialize(149,"Blue")));
+        productManager.addProduct(new Product("Yamaha","R15V3",1,2500,new Specialize(150,"Black-Yellow")));
+        productManager.addProduct(new Product("Suzuki","GSX150R",1,2100,new Specialize(148,"Black")));
+        productManager.addProduct(new Product("Honda","CB150R",2,3000,new Specialize(150,"Red-Black")));
+        productManager.addProduct(new Product("Yamaha","MT15",2,2200,new Specialize(155,"Black")));
+        productManager.addProduct(new Product("Suzuki","GSX150S",2,2000,new Specialize(145,"Blue")));
     }
-
 }
