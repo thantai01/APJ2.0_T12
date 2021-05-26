@@ -8,7 +8,6 @@ public class Main {
         baseList(productManager);
         Menu.intro();
         programProcess(productManager);
-
     }
     static void programProcess(ProductManager productManager) {
         Scanner sc = new Scanner(System.in);
