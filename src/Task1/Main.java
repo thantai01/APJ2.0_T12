@@ -5,10 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ProductManager productManager = new ProductManager();
-        productManager.addProduct(new Product("Honda","none1",1,999,new Specialize(150,"##")));
-        productManager.addProduct(new Product("Yamaha","none2",1,1999,new Specialize(250,"##")));
-        productManager.addProduct(new Product("Suzuki","none3",1,888,new Specialize(600,"##")));
-        productManager.addProduct(new Product("Kawasaki","none4",1,2999,new Specialize(1000,"##")));
+        baseList(productManager);
 //        //Main
         Menu.intro();
         programProcess(productManager);
@@ -33,10 +30,11 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Enter product name");
-                    String oldProductName = sc.nextLine();
                     sc.nextLine();
+                    String oldProductName = sc.nextLine();
                     Product newProduct = Menu.newProduct();
                     productManager.updateProduct(oldProductName,newProduct);
+                    System.out.println("Item has updated");
                     System.out.println("-----------");
                     break;
                 case 4:
@@ -58,4 +56,13 @@ public class Main {
 
         } while (actionInput > 0 && actionInput <7);
     }
+    static void baseList(ProductManager productManager) {
+        productManager.addProduct(new Product("Honda","CBR150R",1,2300,new Specialize(149,"Repsol")));
+        productManager.addProduct(new Product("Yamaha","R15V3",1,2500,new Specialize(149,"Black-Yellow")));
+        productManager.addProduct(new Product("Suzuki","GSX150R",1,2100,new Specialize(149,"Black")));
+        productManager.addProduct(new Product("Honda","CB150R",2,3000,new Specialize(149,"Red-Black")));
+        productManager.addProduct(new Product("Yamaha","MT15",2,2200,new Specialize(149,"Black")));
+        productManager.addProduct(new Product("Suzuki","GSX150S",2,2000,new Specialize(149,"Blue")));
+    }
+
 }
