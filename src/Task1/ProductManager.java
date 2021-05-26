@@ -19,12 +19,13 @@ public class ProductManager {
         }
     }
 
-    public void deleteByName(String name) {
-        for (Product product: productList) {
-            if(product.getName().equals(name)) {
-                product = null;
-            }
-        }
+    public void deleteByName(String name, ProductManager product) {
+        int indexOfProduct = checkProductIndex(name);
+        if(indexOfProduct ==-1) {
+            System.out.println("Product not found");
+        } else productList.remove(indexOfProduct);
+
+
     }
 
     public void findByBrand(String brand) {
@@ -37,11 +38,8 @@ public class ProductManager {
 
     public void findByType(int type) {
         for(Product product : productList) {
-            if(product.getType()==1) {
-                System.out.println(product + "\n");break;
-            } else if(product.getType()==2) {
-                System.out.println(product + "\n");break;
-            }
+            if(product.getType()==type)
+                System.out.println(product + "\n");
         }
     }
 
@@ -68,6 +66,7 @@ public class ProductManager {
                 return i;
         } return -1;
     }
+
     public void updateProduct(String name, Product product) {
         int productIndex = checkProductIndex(name);
         if(productIndex ==-1) {

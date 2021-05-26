@@ -41,7 +41,7 @@ public class Menu {
         System.out.print("Enter a product name want to delete: ");
         Scanner sc = new Scanner(System.in);
         String name = sc.nextLine();
-        productManager.deleteByName(name);
+        productManager.deleteByName(name,productManager);
 
     }
 
@@ -55,7 +55,9 @@ public class Menu {
         switch (select) {
             case 1:
                 System.out.print("Enter brand name: ");
+                sc.nextLine();
                 String brand = sc.nextLine();
+                System.out.println("# Result : ");
                 productManager.findByBrand(brand);
                 break;
             case 2:
@@ -75,6 +77,8 @@ public class Menu {
                 int max = sc.nextInt();
                 productManager.findByPriceRange(min,max);
                 break;
+            default:
+                System.out.println("Invalid!");
         }
     }
 
@@ -115,9 +119,17 @@ public class Menu {
                 productManager.sortByCC();
                 productManager.printProduct();
                 break;
+            default:
+                System.out.println("Invalid!");
         }
     }
 
+//    static int countItem(ProductManager productManager) {
+//        int count = 0;
+//        for (int i = 0; i < productManager.; i++) {
+//
+//        }
+//    }
 }
 
 

@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
         ProductManager productManager = new ProductManager();
         baseList(productManager);
-//        //Main
         Menu.intro();
         programProcess(productManager);
 
@@ -52,6 +51,8 @@ public class Main {
                     break;
                 case 7:
                     System.exit(0);
+                default:
+                    System.out.println("Invalid! Re-enter again");
             }
 
         } while (actionInput > 0 && actionInput <7);
