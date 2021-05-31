@@ -1,10 +1,12 @@
 package Task1;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Product {
-    private String brand;
+public class Product implements Serializable{
+    private static final long serialVersionUID = -266706354210367639L;
+    private String brand ;
     private String name;
     private int type;
     private float price;
@@ -69,6 +71,13 @@ public class Product {
             case 2: typeName = "Naked";break;
         }
         return typeName;
+    }
+
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
+    }
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
     }
 
     @Override

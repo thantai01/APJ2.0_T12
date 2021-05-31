@@ -1,13 +1,18 @@
 package Task1;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         ProductManager productManager = new ProductManager();
-        baseList(productManager);
-        Menu.intro();
-        programProcess(productManager);
+//        baseList(productManager);
+//        Menu.intro();
+//        programProcess(productManager);
+
+//        FileCSV.overwriteCSV2("data2.csv", productManager.productList);
+//        FileCSV.readFile("data2.csv");
+//        productManager.printProduct();
     }
     static void programProcess(ProductManager productManager) {
         Scanner sc = new Scanner(System.in);

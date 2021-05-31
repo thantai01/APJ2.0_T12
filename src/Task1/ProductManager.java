@@ -2,8 +2,8 @@ package Task1;
 
 import java.util.*;
 
-public class ProductManager {
-    private List<Product> productList = null;
+public class ProductManager{
+    public List<Product> productList = null;
 
     public ProductManager() {
         this.productList = new LinkedList<>();
@@ -24,8 +24,6 @@ public class ProductManager {
         if(indexOfProduct ==-1) {
             System.out.println("Product not found");
         } else productList.remove(indexOfProduct);
-
-
     }
 
     public void findByBrand(String brand) {

@@ -1,6 +1,9 @@
 package Task1;
 
-public class Specialize {
+import java.io.Serializable;
+
+public class Specialize implements Serializable {
+    private static final long serialVersionUID = -266706354210367639L;
     private int cc;
     private String color;
 
