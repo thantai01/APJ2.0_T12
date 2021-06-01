@@ -1,8 +1,11 @@
 package Task1;
 
+import javafx.util.converter.LocalDateTimeStringConverter;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class Product implements Serializable{
     private static final long serialVersionUID = -266706354210367639L;
@@ -22,6 +25,14 @@ public class Product implements Serializable{
         this.price = price;
         this.specialize = specialize;
         this.localDateTime = LocalDateTime.now();
+    }
+    public Product(String brand, String name, int type, float price, Specialize specialize, String localDateTime) {
+        this.brand = brand;
+        this.name = name;
+        this.type = type;
+        this.price = price;
+        this.specialize = specialize;
+        this.localDateTime = LocalDateTime.parse(localDateTime,DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
     }
 
     public void setSpecialize(Specialize specialize) {
