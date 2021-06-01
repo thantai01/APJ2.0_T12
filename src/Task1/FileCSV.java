@@ -62,17 +62,19 @@ public class FileCSV {
     static List<Product> readFile(String path) throws IOException {
         FileReader fr = new FileReader(path);
         BufferedReader br = new BufferedReader(fr);
-        String content = br.readLine();
-        String[] line = content.split(",");
+        String content;
         List<Product> newList = new ArrayList<>();
-        for (int i = 0; i < line.length; i++) {
-            newList.add(new Product(line[0], line[1],
-                    (Integer.parseInt(line[2])),
-                    (Float.parseFloat(line[3])),
-                    (new Specialize((Integer.parseInt(line[4])), line[5])),
-                    line[6]));
+        while((content = br.readLine())!=null) {
+            String[] line = content.split(",");
+            for (int i = 0; i < line.length; i++) {
+                newList.add(new Product(line[0], line[1],
+                        (Integer.parseInt(line[2])),
+                        (Float.parseFloat(line[3])),
+                        (new Specialize((Integer.parseInt(line[4])), line[5])),
+                        line[6]));
+            }
         }
-        System.out.println(newList);
+//        System.out.println(newList);
         return  newList;
     }
 }

@@ -1,11 +1,9 @@
 package Task1;
 
-import javafx.util.converter.LocalDateTimeStringConverter;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+
 
 public class Product implements Serializable{
     private static final long serialVersionUID = -266706354210367639L;

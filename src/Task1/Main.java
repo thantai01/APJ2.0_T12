@@ -12,7 +12,8 @@ public class Main {
 
 //        FileCSV.overwriteCSV2("data2.csv", productManager.productList);
         FileCSV.readFile("data2.csv");
-//        productManager.printProduct();
+        productManager.productList = FileCSV.readFile("data2.csv");
+        productManager.printProduct();
     }
     static void programProcess(ProductManager productManager) {
         Scanner sc = new Scanner(System.in);
